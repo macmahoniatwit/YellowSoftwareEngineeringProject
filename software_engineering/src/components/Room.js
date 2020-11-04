@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-class Room extends React.Component {
+class Room extends Component {
   render(){
     return(
       <h1> Componente activo </h1>

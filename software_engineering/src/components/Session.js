@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-class Session extends React.Component {
+class Session extends Component {
   render(){
     return(
       <h1> Componente activo </h1>
