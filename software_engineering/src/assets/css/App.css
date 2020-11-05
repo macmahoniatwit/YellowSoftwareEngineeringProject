@@ -1,3 +1,56 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #20252A
+}
+
+#header {
+  font-size: 16px;
+  color: #edf0f1;
+}
+
+li, a {
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.Nav {
+  list-style: none;
+}
+
+.Nav li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.Nav li a {
+  transition: all .3 ease 0s;
+}
+
+.Nav li a:hover {
+  color: #6495ED
+}
+
+.App_Body {
+  font-size: 20px;
+}
+
+#h2_1 {
   text-align: center;
+  font-size: 24px;
+  font-family: monospace;
+}
+#p1 {
+  font-size: 18px;
+  font-weight: bold;
 }
