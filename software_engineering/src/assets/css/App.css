@@ -38,6 +38,7 @@ header {
 }
 
 .Nav li a:hover {
+  font-size: 20px;
   color: #6495ED
 }
 
