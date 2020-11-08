@@ -1,4 +1,7 @@
 import './assets/css/App.css';
+import './Component/AddSession';
+import './Component/ListSession';
+import './Component/ViewSession';
 
 function App() {
   return (
