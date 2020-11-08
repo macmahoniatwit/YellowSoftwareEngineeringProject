@@ -1,8 +1,4 @@
 import './assets/css/App.css';
-import './components/Room.js';
-import './components/Session.js';
-import './components/Time.js';
-import './components/Speaker.js';
 
 function App() {
   return (
@@ -18,6 +14,7 @@ function App() {
       </header>
       <div class="App_Body">
         <body>
+          <div id='image1'><img src='/landscape.png' alt=''/> </div>
           <div id="h2_1"><h2> Hello </h2></div>
             <div id="p1">
               <p>
