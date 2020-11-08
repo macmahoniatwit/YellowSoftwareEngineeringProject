@@ -1,7 +1,7 @@
 import './assets/css/App.css';
-import './Component/AddSession';
-import './Component/ListSession';
-import './Component/ViewSession';
+import './components/AddSession';
+import './components/ListSession';
+import './components/ViewSession';
 
 function App() {
   return (
