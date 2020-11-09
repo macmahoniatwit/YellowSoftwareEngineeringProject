@@ -1,7 +1,8 @@
 import AddSession from './components/AddSession';
 import ListSession from './components/ListSession';
-import {Nav, Navbar} from 'react-bootstrap';
 import './components/ViewSession';
+import './assets/css/App.css';
+import {Nav, Navbar} from 'react-bootstrap';
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -13,7 +14,7 @@ import {
 function App() {
   return (
       <div className="App">
-      <Navbar bg="light" variant="light">
+      <Navbar bg="dark" variant="light">
         <Navbar.Brand href="">Software Engineering</Navbar.Brand>
         <Nav className="justify-content-end">
             <Link to="/ListSession">Session List</Link>
