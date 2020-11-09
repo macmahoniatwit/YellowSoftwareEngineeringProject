@@ -2,6 +2,7 @@ import AddSession from './components/AddSession';
 import ListSession from './components/ListSession';
 import ViewSession from './components/ViewSession';
 import {Nav, Navbar} from 'react-bootstrap';
+import './assets/css/App.css'
 import React from "react";
 import {
   BrowserRouter as Router,
