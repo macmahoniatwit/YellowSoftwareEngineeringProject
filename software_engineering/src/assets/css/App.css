@@ -1,1 +1,15 @@
+.justify-content-end {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 270px;
+}
 
+
+.justify-content-end:hover {
+  font-weight: bold;
+}
+
+#L1 {
+  padding-right: 15px;
+}

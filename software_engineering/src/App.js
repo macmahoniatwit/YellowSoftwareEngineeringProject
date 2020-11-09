@@ -14,10 +14,10 @@ import {
 function App() {
   return (
       <div className="App">
-      <Navbar bg="dark" variant="light">
+      <Navbar bg="dark" variant="dark">
         <Navbar.Brand href="">Software Engineering</Navbar.Brand>
         <Nav className="justify-content-end">
-            <Link to="/ListSession">Session List</Link>
+            <div id="L1"><Link to="/ListSession">Session List</Link></div>
             <Link to="/AddSession">Add Session</Link>
         </Nav>
       </Navbar>
