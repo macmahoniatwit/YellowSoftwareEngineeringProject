@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 export default class ListSession extends Component {
   render(){
     return(
-      <h1> Componente activo </h1>
+      <h1> Sessions: </h1>
     );
   }
 
