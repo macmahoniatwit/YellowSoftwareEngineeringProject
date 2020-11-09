@@ -1,7 +1,6 @@
 import AddSession from './components/AddSession';
 import ListSession from './components/ListSession';
-import './components/ViewSession';
-import './assets/css/App.css';
+import ViewSession from './components/ViewSession';
 import {Nav, Navbar} from 'react-bootstrap';
 import React from "react";
 import {
@@ -18,12 +17,13 @@ function App() {
         <Navbar.Brand href="">Software Engineering</Navbar.Brand>
         <Nav className="justify-content-end">
             <div id="L1"><Link to="/ListSession">Session List</Link></div>
-            <Link to="/AddSession">Add Session</Link>
+            <Link to="/AddSession">Add Session  </Link>
         </Nav>
       </Navbar>
       <Switch>
         <Route path="/ListSession" component= {ListSession} />
         <Route path="/AddSession" component= {AddSession} />
+        <Route path="/ViewSession" component= {ViewSession} />
       </Switch>
     </div>
   );
