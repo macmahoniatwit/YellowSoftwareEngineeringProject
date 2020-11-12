@@ -9,6 +9,7 @@ export default class ListSession extends Component {
           <thead>
             <tr>
               <th>Speaker</th>
+              <th>Session Name</th>
               <th>Room Name</th>
               <th>Time</th>
             </tr>
@@ -16,19 +17,22 @@ export default class ListSession extends Component {
         <tbody>
           <tr>
             <td><a href="/ViewSession">Victor</a></td>
+            <td><a href="">Theory of Everything</a></td>
             <td><a href="">Annex</a></td>
-            <td><a href="">9AM</a></td>
+            <td><a href="">9AM-10AM</a></td>
 
           </tr>
           <tr>
             <td><a href="">Carlos</a></td>
+            <td><a href="">Why c is good</a></td>
             <td><a href="">Beatty</a></td>
-            <td><a href="">10:30AM</a></td>
+            <td><a href="">10:30AM-11AM</a></td>
           </tr>
           <tr>
             <td><a href="">Brian</a></td>
+            <td><a href="">What not to do</a></td>
             <td><a href="">Watson</a></td>
-            <td><a href="">11AM</a></td>
+            <td><a href="">11AM-12PM</a></td>
           </tr>
         </tbody>
 </Table>

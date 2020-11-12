@@ -6,7 +6,7 @@ export default class AddSession extends Component {
       <div>
         <h1 className="text-center">Add a Session</h1>
         <Container>
-        <h2 className="text-Left"> Select Speaker</h2>
+        <h2 className="text-Left">Speaker Info</h2>
           <Row>
             <Col>
             <Form>
@@ -22,7 +22,17 @@ export default class AddSession extends Component {
             </Form>
             </Col>
           </Row>
-          <h2 className="text-Left"> Select Session Time</h2>
+          <h2 className="text-Left"> Session Info</h2>
+          <Row>
+            <Col sm={8}>
+            <Form>
+                <Form.Group controlId="SessionName">
+                  <Form.Label>Session Name</Form.Label>
+                  <Form.Control type="text" placeholder="Enter Session Name" />
+                </Form.Group>
+              </Form>
+            </Col>
+          </Row>
           <Row>
             <Col>
               <Form>
