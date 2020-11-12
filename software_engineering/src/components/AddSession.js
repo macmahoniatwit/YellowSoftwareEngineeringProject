@@ -63,5 +63,4 @@ export default class AddSession extends Component {
       </div>
     );
   }
-
 }

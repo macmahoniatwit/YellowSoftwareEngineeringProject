@@ -17,7 +17,7 @@ import {
 function App() {
   return (
       <div className="App">
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="light" variant="light">
         <Navbar.Brand href="/">Software Engineering</Navbar.Brand>
         <Nav className="justify-content-end">
             <div id="L1"><Link to="/ListSession">Session List</Link></div>
