@@ -13,7 +13,7 @@ export default class AddSession extends Component {
               <Form.Group controlId="SelectSpeaker">
               <Form.Label>Select Speaker:&nbsp;</Form.Label>
                 <select name="Speaker" id="Speaker">
-                  <option value="Default" selected>Default</option>
+                  <option value="Default" selected>Select</option>
                   <option value="Victor">Victor Lemus</option>
                   <option value="Carlos">Carlos LastName</option>
                   <option value="Brian">Brian LastName</option>
@@ -29,7 +29,7 @@ export default class AddSession extends Component {
                 <Form.Group controlId="StartTime">
                   <Form.Label>Start Time - End Time:&nbsp;</Form.Label>
                   <select name="Speaker" id="Speaker">
-                    <option value="Default" selected>Default</option>
+                    <option value="Default" selected>Select</option>
                     <option value="9AM-10AM">9AM-10AM</option>
                     <option value="10AM-11AM">10AM-11AM</option>
                     <option value="11AM-12PM">11AM-12PM</option>

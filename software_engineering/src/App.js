@@ -21,7 +21,7 @@ function App() {
         <Navbar.Brand href="/">Software Engineering</Navbar.Brand>
         <Nav className="justify-content-end">
             <div id="L1"><Link to="/ListSession">Session List</Link></div>
-            <Link to="/SpeakerList">SpeakerList&nbsp;&nbsp;</Link>
+            <Link to="/SpeakerList">Speaker List&nbsp;&nbsp;</Link>
             <Link to="/AddSession">Add Session&nbsp;&nbsp;</Link>
             <Link to="/AddSpeaker">Add Speaker&nbsp;&nbsp;</Link>
         </Nav>

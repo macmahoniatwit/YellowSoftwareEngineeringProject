@@ -7,7 +7,7 @@ export default class ViewSession extends Component {
         <h1 className="text-center">Session View</h1>
         <Container>
         <Button variant="primary">Edit</Button>
-        <h2 className="text-Left"> Select Speaker</h2>
+        <h2 className="text-Left">Select Speaker</h2>
           <Row>
             <Col>
             <Form>
@@ -22,7 +22,7 @@ export default class ViewSession extends Component {
             </Form>
             </Col>
           </Row>
-          <h2 className="text-Left"> Select Session Time</h2>
+          <h2 className="text-Left">Select Session Time</h2>
           <Row>
             <Col>
               <Form>
@@ -38,7 +38,7 @@ export default class ViewSession extends Component {
               </Form>
             </Col>
           </Row>
-          <h2 className="text-Left"> Room Info</h2>
+          <h2 className="text-Left">Room Info</h2>
           <Row>
             <Col>
               <Form>

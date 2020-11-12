@@ -7,7 +7,7 @@ export default class ViewSpeaker extends Component {
         <h1 className="text-center">Speaker View</h1>
         <Container>
           <Button variant="primary">Edit</Button>
-          <h2 className="text-Left"> Speaker Info</h2>
+          <h2 className="text-Left">Speaker Info</h2>
           <Row>
             <Col>
               <Form>

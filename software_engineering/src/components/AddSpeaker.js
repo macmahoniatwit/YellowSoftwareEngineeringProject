@@ -6,7 +6,7 @@ export default class AddSpeaker extends Component {
       <div>
         <h1 className="text-center">Add a Speaker</h1>
         <Container>
-          <h2 className="text-Left"> Speaker Info</h2>
+          <h2 className="text-Left">Speaker Info</h2>
           <Row>
             <Col>
               <Form>
