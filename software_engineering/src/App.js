@@ -17,13 +17,13 @@ import {
 function App() {
   return (
       <div className="App">
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="light" variant="light">
         <Navbar.Brand href="/">Software Engineering</Navbar.Brand>
         <Nav className="justify-content-end">
             <div id="L1"><Link to="/ListSession">Session List</Link></div>
-            <Link to="/SpeakerList">SpeakerList&nbsp;&nbsp;</Link>
-            <Link to="/AddSession">Add Session&nbsp;&nbsp;</Link>
-            <Link to="/AddSpeaker">Add Speaker&nbsp;&nbsp;</Link>
+            <div id="L2"><Link to="/SpeakerList">Speaker List&nbsp;&nbsp;</Link></div>
+            <div id="L3"><Link to="/AddSession">Add Session&nbsp;&nbsp;</Link></div>
+            <div id="L4"><Link to="/AddSpeaker">Add Speaker&nbsp;&nbsp;</Link></div>
         </Nav>
       </Navbar>
       <Switch>

@@ -35,7 +35,7 @@ export default class SpeakerList extends Component {
             <td><a href="">xxx-xxx-xxxx</a></td>
           </tr>
         </tbody>
-</Table>
+        </Table>
       </div>
         );
     }

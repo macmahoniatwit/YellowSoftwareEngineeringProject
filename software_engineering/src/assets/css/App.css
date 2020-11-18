@@ -2,16 +2,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 28%;
-}
-
-
-.justify-content-end:hover {
-  font-weight: bold;
+  padding: 30px 29%;
 }
 
 #L1 {
-  padding-right: 10px;
+  padding-right: 50px;
 }
 
+#L2 {
+  padding-right: 50px;
+}
 
+#L3 {
+  padding-right: 50px;
+}
+
+#L4 {
+  padding-right: 50px;
+}
