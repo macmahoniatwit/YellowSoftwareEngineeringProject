@@ -4,14 +4,14 @@ const { Connection, Request } = require("tedious");
 const config = {
   authentication: {
     options: {
-      userName: "username", // update me
-      password: "password" // update me
+      userName: "softwareadmin", 
+      password: "" // update me
     },
     type: "default"
   },
-  server: "your_server.database.windows.net", // update me
+  server: "softwareserver.database.windows.net", 
   options: {
-    database: "your_database", //update me
+    database: "softwaredb", 
     enableArithAbort: true,
     encrypt: true,
     validateBulkLoadParameters: true
@@ -21,6 +21,12 @@ const config = {
 const connection = new Connection(config);
 
 // Attempt to connect and execute queries if connection goes through
+/*
+*dbo.room
+*dbo.session
+*dbo.speaker
+*dbo.time
+*/
 connection.on("connect", err => {
   if (err) {
     console.error(err.message);
@@ -34,10 +40,7 @@ function queryDatabase() {
 
   // Read all rows from table
   const request = new Request(
-    `SELECT TOP 20 pc.Name as CategoryName,
-                   p.name as ProductName
-     FROM [SalesLT].[ProductCategory] pc
-     JOIN [SalesLT].[Product] p ON pc.productcategoryid = p.productcategoryid`,
+    `SELECT * FROM dbo.room`,
     (err, rowCount) => {
       if (err) {
         console.error(err.message);
