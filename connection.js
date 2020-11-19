@@ -12,7 +12,9 @@ const config = {
   server: "your_server.database.windows.net", // update me
   options: {
     database: "your_database", //update me
-    encrypt: true
+    enableArithAbort: true,
+    encrypt: true,
+    validateBulkLoadParameters: true
   }
 };
 
