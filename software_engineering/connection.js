@@ -5,7 +5,7 @@ const config = {
   authentication: {
     options: {
       userName: "softwareadmin", 
-      password: "yellowteam2020!" // update me
+      password: "" // update me
     },
     type: "default"
   },
