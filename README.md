@@ -1,5 +1,7 @@
 # YellowSoftwareEngineeringProject
-Repository to hold all materials pertaining to Software Engineering Project
+This project serves for the Software Engineering course at WIT. The mission here is
+to develop a web application that can give a solution to the client's need. This project
+is a collaborative effort by each group member.
 
 ## How to start App
 - Install node
@@ -12,6 +14,5 @@ Repository to hold all materials pertaining to Software Engineering Project
 - run "node connection.js"
 
 ## How to get access to the database
-- give your ip to Lee 
-- account info ? 
-
+- give your ip to Lee
+- account info ?
