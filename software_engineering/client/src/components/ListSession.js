@@ -15,7 +15,7 @@ export default class ListSession extends Component {
         this.setState({ sessions });
       })
   }
-  
+
   /*
   <Table striped bordered hover>
           <thead>
@@ -53,9 +53,9 @@ export default class ListSession extends Component {
   render(){
     return(
       <div>
-        <h1 className="text-center">Session List</h1>
+        <div id='session-list'><h1 className="text-center">Session List</h1></div>
         <ul>
-        { this.state.sessions.map(session => <li>{session.session_name}</li>)}
+        { this.state.sessions.map(session => <li>{session.sessionName}</li>)}
       </ul>
       </div>
     );

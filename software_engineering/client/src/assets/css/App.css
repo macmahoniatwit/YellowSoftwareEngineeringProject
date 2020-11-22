@@ -1,3 +1,4 @@
+
 .justify-content-end {
   display: flex;
   justify-content: space-between;
@@ -19,4 +20,24 @@
 
 #L4 {
   padding-right: 50px;
+}
+
+#session-list{
+  padding: 20px;
+  color: green;
+}
+
+#speaker-list {
+  padding: 20px;
+  color: green;
+}
+
+#add-session {
+  padding: 20px;
+  color: green;
+}
+
+#add-speaker {
+  padding: 20px;
+  color: green;
 }

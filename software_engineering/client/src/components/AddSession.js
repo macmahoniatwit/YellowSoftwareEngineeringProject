@@ -4,7 +4,7 @@ export default class AddSession extends Component {
   render(){
     return(
       <div>
-        <h1 className="text-center">Add a Session</h1>
+        <div id='add-session'><h1 className="text-center">Add a Session</h1></div>
         <Container>
         <h2 className="text-Left">Speaker Info</h2>
           <Row>

@@ -9,7 +9,7 @@ app.use(express.json());
 const db = mysql.createConnection({
   user: "root",
   host: "localhost",
-  database: "codecamp_db",
+  database: "se_project",
 });
 
 /*app.post("/create", (req, res) => {

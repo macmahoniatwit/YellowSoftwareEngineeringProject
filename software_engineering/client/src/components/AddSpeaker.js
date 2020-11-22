@@ -4,7 +4,7 @@ export default class AddSpeaker extends Component {
   render(){
     return(
       <div>
-        <h1 className="text-center">Add a Speaker</h1>
+        <div id='add-speaker'><h1 className="text-center">Add a Speaker</h1></div>
         <Container>
           <h2 className="text-Left">Speaker Info</h2>
           <Row>
