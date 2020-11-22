@@ -24,7 +24,7 @@ DROP TABLE IF EXISTS `room`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `room` (
   `Room_id` int NOT NULL AUTO_INCREMENT,
-  `Room name` varchar(45) NOT NULL,
+  `Room_name` varchar(45) NOT NULL,
   `capacity` int NOT NULL,
   PRIMARY KEY (`Room_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

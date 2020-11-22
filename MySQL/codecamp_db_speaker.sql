@@ -24,10 +24,10 @@ DROP TABLE IF EXISTS `speaker`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `speaker` (
   `speaker_id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) NOT NULL,
+  `Speaker_name` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
-  `primary phone` int NOT NULL,
-  `day of phone` varchar(45) NOT NULL,
+  `primary_phone` int NOT NULL,
+  `day_phone` varchar(45) NOT NULL,
   PRIMARY KEY (`speaker_id`),
   UNIQUE KEY `Email_UNIQUE` (`email`),
   UNIQUE KEY `Primary Phone_UNIQUE` (`primary phone`)
