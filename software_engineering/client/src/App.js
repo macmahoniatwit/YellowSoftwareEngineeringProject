@@ -5,6 +5,7 @@ import SpeakerList from './components/SpeakerList';
 import AddSpeaker from './components/AddSpeaker';
 import ViewSpeaker from './components/ViewSpeaker';
 import {Nav, Navbar} from 'react-bootstrap';
+import './assets/css/App.css'
 import {
   BrowserRouter as Router,
   Switch,
