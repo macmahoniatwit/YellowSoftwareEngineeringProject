@@ -8,10 +8,10 @@ export default class SpeakerList extends Component {
         <Table striped bordered hover>
           <thead>
             <tr>
-              <th>Speaker Name</th>
+              <th>Name of the Speaker</th>
               <th>Email</th>
-              <th>Primary Phone</th>
               <th>Day Phone</th>
+              <th>Primary Phone</th>
             </tr>
           </thead>
         <tbody>
