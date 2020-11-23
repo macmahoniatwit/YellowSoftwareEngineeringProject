@@ -55,7 +55,11 @@ export default class ListSession extends Component {
       <div>
         <div id='session-list'><h1 className="text-center">Session List</h1></div>
         <ul>
-        { this.state.sessions.map(session => <li>{session.sessionName}</li>)}
+        { this.state.sessions.map(session => <li>{session.session_name}</li>)}
+        { this.state.sessions.map(session => <li>{session.Speaker_name}</li>)}
+        { this.state.sessions.map(session => <li>{session.Room_name}</li>)}
+        { this.state.sessions.map(session => <li>{session.Start}</li>)}
+        { this.state.sessions.map(session => <li>{session.End}</li>)}
       </ul>
       </div>
     );
