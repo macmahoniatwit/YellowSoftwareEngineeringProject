@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Table} from 'react-bootstrap';
+import axios from "axios";
 export default class SpeakerList extends Component {
   state = {
     speakers: [],
@@ -51,10 +52,10 @@ export default class SpeakerList extends Component {
         <div>
         <div id='session-list'><h1 className="text-center">Session List</h1></div>
         <ul>
-        { this.state.speakers.map(speaker => <li>{speakers.Speaker_name}</li>)}
-        { this.state.speakers.map(session => <li>{speakers.email}</li>)}
-        { this.state.speakers.map(session => <li>{speakers.primary_phone}</li>)}
-        { this.state.speakers.map(session => <li>{speakers.day_phone}</li>)}
+        { this.state.speakers.map(speakers => <li>{speakers.Speaker_name}</li>)}
+        { this.state.speakers.map(speakers => <li>{speakers.email}</li>)}
+        { this.state.speakers.map(speakers => <li>{speakers.primary_phone}</li>)}
+        { this.state.speakers.map(speakers => <li>{speakers.day_phone}</li>)}
       </ul>
         </div>
         );
