@@ -91,6 +91,23 @@ app.post("/AddSession", (req, res) => {
   );
 });
 
+app.post("/AddRoom", (req,res) => {
+  const roomId = req.body.room_name;
+  const roomCapacity = req.body.room_capacity;
+
+  db.query(
+    "INSERT INTO room (Room_id, Room_name, capacity) VALUES (NULL, ?, ?)",
+    [roomId, roomCapacity],
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send("Values Inserted");
+      }
+    }
+  );
+});
+
 app.get("/sessions", (req, res) => {
   db.query("SELECT session_ID, session_name, speaker.Speaker_name, speaker.email, speaker.primary_phone, speaker.day_phone,time.Start, time.End, room.Room_name, room.capacity\
             FROM session\
