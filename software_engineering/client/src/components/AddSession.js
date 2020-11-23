@@ -74,6 +74,7 @@ export default class AddSession extends Component {
       .then(res => {
         console.log(res)
         console.log(res.data)
+        window.location.reload()
       })
   }
 
