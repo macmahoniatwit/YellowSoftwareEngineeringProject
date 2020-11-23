@@ -76,6 +76,26 @@ app.get("/sessions", (req, res) => {
   });
 });
 
+app.get("/sessionspeakers", (req,res) => {
+  db.query("SELECT Speaker_name, speaker_id FROM speaker", (err,result) => {
+    if(err) {
+      console.log(err);
+    } else {
+      res.send(result);
+    }
+  });
+});
+
+app.get("/sessiontimes", (req,res) => {
+  db.query("SELECT GROUP_CONCAT(Start, '-', End SEPARATOR ' '), Time_id FROM time", (err,result) => {
+    if(err) {
+      console.log(err);
+    } else {
+      res.send(result);
+    }
+  });
+});
+
 /*app.put("/update", (req, res) => {
   const id = req.body.id;
   const wage = req.body.wage;
