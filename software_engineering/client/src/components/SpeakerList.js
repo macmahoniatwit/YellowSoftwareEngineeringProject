@@ -25,7 +25,7 @@ export default class SpeakerList extends Component {
               <th>Primary Phone</th>
             </tr>
           </thead>
-        <tbody>
+        <tbody> 
           <tr>
             <td><a href="/ViewSpeaker">Victor</a></td>
             <td><a href="">lemusv@wit.edu</a></td>
@@ -50,13 +50,35 @@ export default class SpeakerList extends Component {
     render(){
         return(
         <div>
-        <div id='session-list'><h1 className="text-center">Session List</h1></div>
-        <ul>
+        <div id='speaker-list'><h1 className="text-center">Speaker List</h1></div>
+        <Table>
+          <thead>
+            <tr>
+              <th>Name of the Speaker</th>
+              <th>Email</th>
+              <th>Day Phone</th>
+              <th>Primary Phone</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.state.speakers.map((speaker) =>
+          
+            <tr>
+              <td>{speaker.Speaker_name}</td>
+              <td>{speaker.email}</td>
+              <td>{speaker.primary_phone}</td>
+              <td>{speaker.day_phone}</td>
+            </tr>
+          )}
+          </tbody> 
+        </Table>
+          
+        {/* <ul>
         { this.state.speakers.map(speakers => <li>{speakers.Speaker_name}</li>)}
         { this.state.speakers.map(speakers => <li>{speakers.email}</li>)}
         { this.state.speakers.map(speakers => <li>{speakers.primary_phone}</li>)}
         { this.state.speakers.map(speakers => <li>{speakers.day_phone}</li>)}
-      </ul>
+      </ul> */}
         </div>
         );
     }
