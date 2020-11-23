@@ -1,54 +1,48 @@
-.App {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
-.information {
+.justify-content-end {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-
+  padding: 30px 20%;
 }
 
-input {
-  width: 300px;
-  height: 50px;
-  font-size: 20px;
-  padding-left: 10px;
-  margin: 5px;
-
+#L1 {
+  padding-right: 40px;
 }
 
- button {
-  width: 320px;
-  height: 50px;
-  margin-top: 15px;
-} 
-
- button:hover {
-  cursor: pointer;
+#L2 {
+  padding-right: 40px;
 }
 
-.employees {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
+#L3 {
+  padding-right: 50px;
 }
 
-.employee {
-  width: 700px;
-  height: auto;
-  border: 1px solid black;
-  margin: 10px;
-  display: flex;
-  padding: 10px;
-  font-family: 'Courier New', Courier, monospace;
+#L4 {
+  padding-right: 50px;
 }
 
-.employee h3 {
-  margin: 20px;
+#session-list{
+  padding: 20px;
+  color: green;
+}
+
+#speaker-list {
+  padding: 20px;
+  color: green;
+}
+
+#add-session {
+  padding: 20px;
+  color: green;
+}
+
+#add-speaker {
+  padding: 20px;
+  color: green;
+}
+
+#add-room {
+  padding: 20px;
+  color: green;
 }

@@ -4,6 +4,7 @@ import ViewSession from './components/ViewSession';
 import SpeakerList from './components/SpeakerList';
 import AddSpeaker from './components/AddSpeaker';
 import ViewSpeaker from './components/ViewSpeaker';
+import AddRoom from './components/AddRoom';
 import {Nav, Navbar} from 'react-bootstrap';
 import './assets/css/App.css'
 import {
@@ -96,6 +97,7 @@ function App() {
             <div id="L2"><Link to="/SpeakerList">Speaker List&nbsp;&nbsp;</Link></div>
             <div id="L3"><Link to="/AddSession">Add Session&nbsp;&nbsp;</Link></div>
             <div id="L4"><Link to="/AddSpeaker">Add Speaker&nbsp;&nbsp;</Link></div>
+            <div id="L5"><Link to="/AddRoom">Add Room&nbsp;&nbsp;</Link></div>
         </Nav>
       </Navbar>
       <Switch>
@@ -105,6 +107,7 @@ function App() {
         <Route path="/SpeakerList" component= {SpeakerList} />
         <Route path="/AddSpeaker" component= {AddSpeaker} />
         <Route path="/ViewSpeaker" component= {ViewSpeaker} />
+        <Route path="/AddRoom" component= {AddRoom} />
       </Switch>
     </div>
     /*<div className="App">
