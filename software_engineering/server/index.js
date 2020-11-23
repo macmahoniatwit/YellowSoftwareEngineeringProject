@@ -41,6 +41,16 @@ app.get("/SpeakerList", (req, res) => {
   });
 });
 
+app.get("/RoomList", (req, res) => {
+  db.query("SELECT Room_id, Room_name FROM room", (err,result) => {
+    if  (err) {
+      console.log(err);
+    } else {
+      res.send(result);
+    }
+  });
+});
+
 app.post("/AddSpeaker", (req, res) => {
   const Speaker_name = req.body.Speaker_name;
   const email = req.body.email;
@@ -51,6 +61,26 @@ app.post("/AddSpeaker", (req, res) => {
   db.query(
     "INSERT INTO speaker (speaker_id, Speaker_name, email, primary_phone, day_phone) VALUES (NULL, ?, ?, ?, ?)",
     [Speaker_name,email,primary_phone,day_phone],
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send("Values Inserted");
+      }
+    }
+  );
+});
+
+app.post("/AddSession", (req, res) => {
+  console.log(req);
+  const speakerId = req.body.speakerId;
+  const timeId = req.body.timeId;
+  const roomId = req.body.roomId;
+  const sessionName = req.body.sessionName;
+
+  db.query(
+    "INSERT INTO session (session_id, speaker_id, time_id, room_id, session_name) VALUES (NULL, ?, ?, ?, ?)",
+    [speakerId,timeId,roomId,sessionName],
     (err, result) => {
       if (err) {
         console.log(err);
