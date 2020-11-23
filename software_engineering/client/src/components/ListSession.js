@@ -16,8 +16,11 @@ export default class ListSession extends Component {
       })
   }
 
-  /*
-  <Table striped bordered hover>
+  render(){
+    return(
+      <div>
+        <div id='session-list'><h1 className="text-center">Session List</h1></div>
+        <Table striped bordered hover>
           <thead>
             <tr>
               <th>Speaker</th>
@@ -26,41 +29,17 @@ export default class ListSession extends Component {
               <th>Time</th>
             </tr>
           </thead>
-        <tbody>
-          <tr>
-            <td><a href="/ViewSession">Victor</a></td>
-            <td><a href="">Theory of Everything</a></td>
-            <td><a href="">Annex</a></td>
-            <td><a href="">9AM-10AM</a></td>
-
-          </tr>
-          <tr>
-            <td><a href="">Carlos</a></td>
-            <td><a href="">Why c is good</a></td>
-            <td><a href="">Beatty</a></td>
-            <td><a href="">10:30AM-11AM</a></td>
-          </tr>
-          <tr>
-            <td><a href="">Brian</a></td>
-            <td><a href="">What not to do</a></td>
-            <td><a href="">Watson</a></td>
-            <td><a href="">11AM-12PM</a></td>
-          </tr>
-        </tbody>
-</Table>
-*/
-
-  render(){
-    return(
-      <div>
-        <div id='session-list'><h1 className="text-center">Session List</h1></div>
-        <ul>
-        { this.state.sessions.map(session => <li>{session.session_name}</li>)}
-        { this.state.sessions.map(session => <li>{session.Speaker_name}</li>)}
-        { this.state.sessions.map(session => <li>{session.Room_name}</li>)}
-        { this.state.sessions.map(session => <li>{session.Start}</li>)}
-        { this.state.sessions.map(session => <li>{session.End}</li>)}
-      </ul>
+          <tbody>
+            {this.state.sessions.map((session) =>
+              <tr>
+                <td>{session.session_name}</td>
+                <td>{session.Speaker_name}</td>
+                <td>{session.Room_name}</td>
+                <td>{session.Start} - {session.End}</td>
+              </tr>
+            )}
+          </tbody>
+        </Table>
       </div>
     );
   }
