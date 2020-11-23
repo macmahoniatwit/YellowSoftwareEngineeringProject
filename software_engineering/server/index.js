@@ -32,7 +32,7 @@ const db = mysql.createConnection({
   );
 });*/
 app.get("/SpeakerList", (req, res) => {
-  db.query("SELECT Speaker_name, email, day_phone, primary_phone FROM codecamp_db_speaker", (err, result) => {
+  db.query("SELECT Speaker_name, email, day_phone, primary_phone FROM speaker", (err, result) => {
     if (err) {
       console.log(err);
     } else {
