@@ -87,7 +87,7 @@ app.get("/sessionspeakers", (req,res) => {
 });
 
 app.get("/sessiontimes", (req,res) => {
-  db.query("SELECT GROUP_CONCAT(Start, '-', End SEPARATOR ' '), Time_id FROM time", (err,result) => {
+  db.query("SELECT GROUP_CONCAT(Start, '-', End SEPARATOR ' ') as time, Time_id FROM time", (err,result) => {
     if(err) {
       console.log(err);
     } else {

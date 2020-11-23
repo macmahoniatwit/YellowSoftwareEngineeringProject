@@ -1,6 +1,29 @@
 import React, {Component} from 'react';
 import {Form, Button, Container, Row, Col} from 'react-bootstrap';
+import axios from "axios";
 export default class AddSession extends Component {
+  state = {
+    speakers: [],
+    times: [],
+    currentIndex: -1
+  }
+
+  componentDidMount() {
+    axios.get("http://localhost:3001/sessionspeakers")
+      .then(res => {
+        const speakers = res.data;
+        this.setState({ speakers });
+        console.log(res.data)
+      });
+
+      axios.get("http://localhost:3001/sessiontimes")
+      .then(res => {
+        const times = res.data;
+        this.setState({ times });
+        console.log(res.data)
+      });
+  }
+
   render(){
     return(
       <div>
@@ -14,61 +37,38 @@ export default class AddSession extends Component {
               <Form.Label>Select Speaker:&nbsp;</Form.Label>
                 <select name="Speaker" id="Speaker">
                   <option value="Default" selected>Select</option>
-                  <option value="Victor">Victor Lemus</option>
-                  <option value="Carlos">Carlos LastName</option>
-                  <option value="Brian">Brian LastName</option>
+                  {this.state.speakers.map((speaker) =>
+                    <option value={speaker}>{speaker.Speaker_name}</option>
+                  )}
                 </select>
               </Form.Group>
+              <h2 className="text-Left"> Session Info</h2>
+              <Form.Group controlId="SessionName">
+                  <Form.Label>Session Name</Form.Label>
+                  <Form.Control type="text" placeholder="Enter Session Name" />
+              </Form.Group>
+              <Form.Group controlId="StartTime">
+                  <Form.Label>Start Time - End Time:&nbsp;</Form.Label>
+                  <select name="Time" id="Time">
+                    <option value="Default" selected>Select</option>
+                    {this.state.times.map((time) =>
+                      <option value={time}>{time.time}</option>
+                    )}
+                  </select>
+              </Form.Group>
+              <h2 className="text-Left"> Room Info</h2>
+              <Form.Group controlId="RoomName">
+                <Form.Label>Room Name</Form.Label>
+                <Form.Control type="text" placeholder="Enter Room Name" />
+              </Form.Group>
+              <Form.Group controlId="Room Capacity">
+                <Form.Label>Room Capacity</Form.Label>
+                <Form.Control type="text" placeholder="Enter Room Capacity" />
+              </Form.Group>
+              <Button className="pull-right" variant="primary" type="submit">Submit</Button>
             </Form>
             </Col>
           </Row>
-          <h2 className="text-Left"> Session Info</h2>
-          <Row>
-            <Col sm={8}>
-            <Form>
-                <Form.Group controlId="SessionName">
-                  <Form.Label>Session Name</Form.Label>
-                  <Form.Control type="text" placeholder="Enter Session Name" />
-                </Form.Group>
-              </Form>
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <Form>
-                <Form.Group controlId="StartTime">
-                  <Form.Label>Start Time - End Time:&nbsp;</Form.Label>
-                  <select name="Speaker" id="Speaker">
-                    <option value="Default" selected>Select</option>
-                    <option value="9AM-10AM">9AM-10AM</option>
-                    <option value="10AM-11AM">10AM-11AM</option>
-                    <option value="11AM-12PM">11AM-12PM</option>
-                    <option value="1PM-2PM">1PM-2PM</option>
-                  </select>
-                </Form.Group>
-              </Form>
-            </Col>
-          </Row>
-          <h2 className="text-Left"> Room Info</h2>
-          <Row>
-            <Col>
-              <Form>
-                <Form.Group controlId="RoomName">
-                  <Form.Label>Room Name</Form.Label>
-                  <Form.Control type="text" placeholder="Enter Room Name" />
-                </Form.Group>
-              </Form>
-            </Col>
-            <Col>
-              <Form>
-                <Form.Group controlId="Room Capacity">
-                  <Form.Label>Room Capacity</Form.Label>
-                  <Form.Control type="text" placeholder="Enter Room Capacity" />
-                </Form.Group>
-              </Form>
-            </Col>
-          </Row>
-          <Button className="pull-right" variant="primary" type="submit">Submit</Button>
         </Container>
       </div>
     );
