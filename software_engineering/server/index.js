@@ -31,7 +31,7 @@ const db = mysql.createConnection({
     }
   );
 });*/
-app.get("/speaker_list", (req, res) => {
+app.get("/SpeakerList", (req, res) => {
   db.query("SELECT Speaker_name, email, day_phone, primary_phone FROM codecamp_db_speaker", (err, result) => {
     if (err) {
       console.log(err);

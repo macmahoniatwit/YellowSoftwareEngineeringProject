@@ -1,10 +1,20 @@
 import React, {Component} from 'react';
 import {Table} from 'react-bootstrap';
 export default class SpeakerList extends Component {
-    render(){
-        return(
-            <div>
-        <div id='speaker-list'><h1 className="text-center">Speaker List</h1></div>
+  state = {
+    speakers: [],
+    currentIndex: -1
+  }
+
+  componentDidMount() {
+    axios.get("http://localhost:3001/SpeakerList")
+      .then(res => {
+        const speakers = res.data;
+        this.setState({ speakers });
+      })
+  }
+  /*
+  <div id='speaker-list'><h1 className="text-center">Speaker List</h1></div>
         <Table striped bordered hover>
           <thead>
             <tr>
@@ -35,8 +45,18 @@ export default class SpeakerList extends Component {
             <td><a href="">xxx-xxx-xxxx</a></td>
           </tr>
         </tbody>
-        </Table>
-      </div>
+        </Table>*/
+    render(){
+        return(
+        <div>
+        <div id='session-list'><h1 className="text-center">Session List</h1></div>
+        <ul>
+        { this.state.speakers.map(speaker => <li>{speakers.Speaker_name}</li>)}
+        { this.state.speakers.map(session => <li>{speakers.email}</li>)}
+        { this.state.speakers.map(session => <li>{speakers.primary_phone}</li>)}
+        { this.state.speakers.map(session => <li>{speakers.day_phone}</li>)}
+      </ul>
+        </div>
         );
     }
 }
