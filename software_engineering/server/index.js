@@ -9,7 +9,7 @@ app.use(express.json());
 const db = mysql.createConnection({
   user: "root",
   host: "localhost",
-  database: "codecamp_db",
+  database: "se_project",
 });
 
 /*app.post("/create", (req, res) => {
@@ -46,9 +46,10 @@ app.post("/AddSpeaker", (req, res) => {
   const email = req.body.email;
   const primary_phone = req.body.primary_phone;
   const day_phone = req.body.day_phone;
+  
 
   db.query(
-    "INSERT INTO speaker (Speaker_name, email, primary_phone, day_phone) VALUES (?, ?, ?, ?, ?)",
+    "INSERT INTO speaker (speaker_id, Speaker_name, email, primary_phone, day_phone) VALUES (NULL, ?, ?, ?, ?)",
     [Speaker_name,email,primary_phone,day_phone],
     (err, result) => {
       if (err) {
