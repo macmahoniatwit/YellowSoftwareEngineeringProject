@@ -91,7 +91,7 @@ function App() {
   return (
     <div className="App">
       <Navbar bg="light" variant="light">
-        <Navbar.Brand href="/">Software Engineering</Navbar.Brand>
+        <Navbar.Brand href="/">Boston Code Camp Counter</Navbar.Brand>
         <Nav className="justify-content-end">
             <div id="L1"><Link to="/ListSession">Session List</Link></div>
             <div id="L2"><Link to="/SpeakerList">Speaker List&nbsp;&nbsp;</Link></div>
